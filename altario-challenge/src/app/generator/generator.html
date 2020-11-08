@@ -1,0 +1,39 @@
+<div id="generator">
+  <mat-grid-list cols="4" rowHeight="10rem">
+    <mat-grid-tile class="char-tile">
+      <mat-form-field appearance="outline" class="character-form">
+        <mat-label class="mat-label-text">Character</mat-label>
+        <input matInput [formControl]="character" placeholder="Character" />
+        <mat-hint class="validator-message"
+          >{{[this.messageValidator]}}</mat-hint
+        >
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <app-clock></app-clock>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button
+        mat-stroked-button
+        class="button-generate"
+        (click)="generateGrid()"
+      >
+        GENERATE 2D GRID
+      </button>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <button
+        mat-stroked-button
+        class="button-stop"
+        (click)="this.generatorService.stopGenerateWithTimer()"
+      >
+        STOP GENERATING
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <app-grid [grid]="[this.generatorService.currentGrid]"></app-grid>
+
+  <app-score [score]="[this.generatorService.currentScore]"></app-score>
+</div>

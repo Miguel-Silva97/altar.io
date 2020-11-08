@@ -1,0 +1,18 @@
+<mat-grid-list cols="3" rowHeight="10rem">
+  <mat-grid-tile> </mat-grid-tile>
+  <mat-grid-tile>
+    <div class="form-group">
+      <div class="live-div">
+        <fa-icon [icon]="faCircle" class="text-danger blink"></fa-icon>
+        <mat-label class="label-live">LIVE</mat-label>
+      </div>
+      <div class="score-text">
+        <mat-label class="label-character"
+          >YOUR CODE:
+          <mat-label class="label-score">{{ score }}</mat-label></mat-label
+        >
+      </div>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile> </mat-grid-tile>
+</mat-grid-list>

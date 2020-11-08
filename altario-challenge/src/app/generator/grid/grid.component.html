@@ -1,0 +1,16 @@
+<mat-table #table [dataSource]="grid[0]" class="table-grid">
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <div *ngFor="let item of displayedColumns">
+    <ng-container matColumnDef="{{ item }}">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell class="table-element" *matCellDef="let element">{{
+        element[+item]
+      }}</mat-cell>
+    </ng-container>
+  </div>
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>

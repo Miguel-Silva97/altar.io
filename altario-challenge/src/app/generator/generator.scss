@@ -1,0 +1,63 @@
+.form-rounded {
+  border-radius: 1rem;
+}
+
+.character-input {
+  width: 6rem;
+}
+
+.label-character {
+  color: #b0aead;
+  text-align: center;
+}
+
+.matrix-element {
+  border: 2px solid blue;
+  padding: 2px;
+}
+
+.matrix-div {
+  padding-left: 30px;
+}
+
+.button-generate {
+  background-color: #b0aead;
+  color: white;
+  text-align: center;
+}
+
+.button-stop {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+.form-char {
+  text-align: center;
+}
+
+.validator-message {
+  color: red;
+  font-weight: 500;
+}
+
+.button-generate:hover {
+  background-color: #797575;
+}
+
+.button-stop:hover {
+  background-color: #990505;
+}
+
+.character-form {
+  margin-left: 7%;
+}
+
+.mat-label-text {
+  color: #b0aead;
+  font-weight: 500;
+}
+
+.char-tile {
+  margin-top: 7px;
+}

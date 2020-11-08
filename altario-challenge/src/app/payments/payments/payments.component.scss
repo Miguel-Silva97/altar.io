@@ -1,0 +1,62 @@
+.payment-form {
+  margin-left: 10%;
+}
+
+.mat-label-text {
+  color: #b0aead;
+  font-weight: 500;
+}
+
+.form-space {
+  margin-left: 3%;
+}
+
+.button-add {
+  background-color: #b0aead;
+  color: white;
+}
+
+.button-add:hover {
+  background-color: #797575;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.table-grid {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.table-element {
+  border-left: 0.5px solid #b0aead;
+  display: flex;
+  justify-content: center;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.mat-cell:first-child {
+  border-left: 0.5px solid #b0aead;
+}
+
+.mat-cell:last-child {
+  border-right: 0.5px solid #b0aead;
+}
+
+.mat-row {
+  border-bottom: 0.5px solid #b0aead;
+}
+
+.mat-header-cell {
+  border-left: 0.5px solid #b0aead;
+  border-bottom: 0.5px solid #b0aead;
+  border-top: 0.5px solid #b0aead;
+  padding-left: 0px;
+  padding-right: 0px;
+  justify-content: center;
+}
+
+.mat-header-cell:last-child {
+  border-right: 0.5px solid #b0aead;
+}

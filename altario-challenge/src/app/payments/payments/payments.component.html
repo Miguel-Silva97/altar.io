@@ -1,0 +1,68 @@
+<app-score [score]="this.generatorService.currentScore"> </app-score>
+
+<div>
+  <mat-form-field appearance="outline" class="payment-form">
+    <mat-label class="mat-label-text">Payment</mat-label>
+    <input matInput [formControl]="payment" placeholder="Payment Name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="form-space">
+    <mat-label class="mat-label-text">Ammount</mat-label>
+    <input matInput [formControl]="ammount" placeholder="Payment Ammount" />
+    <mat-hint>Only positive whole numbers</mat-hint>
+  </mat-form-field>
+
+  <button
+    type="submit"
+    mat-raised-button
+    class="button-add form-space"
+    (click)="addPayment()"
+  >
+    <mat-icon>add</mat-icon>Add
+  </button>
+</div>
+
+<mat-table #table [dataSource]="listOfPayments" class="table-grid">
+  <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell class="mat-label-text" *matHeaderCellDef
+      >NAME</mat-header-cell
+    >
+    <mat-cell class="table-element" *matCellDef="let element">{{
+      element.name
+    }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ammount">
+    <mat-header-cell class="mat-label-text" *matHeaderCellDef
+      >AMMOUNT</mat-header-cell
+    >
+    <mat-cell class="table-element" *matCellDef="let element">{{
+      element.ammount
+    }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="code">
+    <mat-header-cell class="mat-label-text" *matHeaderCellDef
+      >CODE</mat-header-cell
+    >
+    <mat-cell class="table-element" *matCellDef="let element">{{
+      element.code
+    }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="grid">
+    <mat-header-cell class="mat-label-text" *matHeaderCellDef
+      >GRID</mat-header-cell
+    >
+    <mat-cell class="table-element" *matCellDef="let element">{{
+      element.grid
+    }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+</mat-table>
